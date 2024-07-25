@@ -33,13 +33,13 @@ export default class Pricing {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
-  convertPrice(amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') {
       throw new Error('Amount must be a number');
     }
     if (typeof conversionRate !== 'number') {
       throw new Error('conversionRate must be a number');
     }
-    return this.amount * this.conversionRate;
+    return amount * conversionRate;
   }
 }
