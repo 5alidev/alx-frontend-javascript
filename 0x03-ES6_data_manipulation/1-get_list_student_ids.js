@@ -1,5 +1,5 @@
 const getListStudentIds = (arr) => {
-  if (arr.constructor !== Array) {
+  if (!Array.isArray(arr)) {
     return [];
   }
   const arrIds = arr.map((obj) => obj.id);
